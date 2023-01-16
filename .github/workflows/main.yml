@@ -23,10 +23,9 @@ jobs:
       run: pytest
   
   build:
-    
+    needs: test
     name: Build Image
     runs-on: ubuntu-latest
-
    
     steps:
 
