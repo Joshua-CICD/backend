@@ -2,7 +2,12 @@
 # docker run -it docker.io/library/backend:local /bin/sh
 
 # Start the service
+# make build
 # docker run -d -p 5000:5000 docker.io/library/backend:local
+
+# Use remote image
+# make aws-registry-auth
+# docker run -d -p 5000:5000 382942022480.dkr.ecr.us-east-1.amazonaws.com/backend-dev:cdffd61f132cc91fabdb2cc87b2ad865d2af722a
 
 FROM 382942022480.dkr.ecr.us-east-1.amazonaws.com/frontend-dev:0fe990bf5b32e22de71ce151355612216ea6b17f as frontend
 
