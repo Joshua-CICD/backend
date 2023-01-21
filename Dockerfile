@@ -11,7 +11,6 @@
 FROM python:3.8-slim-buster
 
 WORKDIR /srv
-COPY --from=frontend /srv/build /frontend/build/.
 
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
