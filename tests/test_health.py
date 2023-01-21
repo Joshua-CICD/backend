@@ -10,6 +10,6 @@ def client():
     yield client
 
 def test_health(client):
-    response = client.get('/health')
+    response = client.get('/api/health')
     assert response.status_code == 200
     assert response.data == b'OK'
